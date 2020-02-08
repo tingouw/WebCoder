@@ -1,0 +1,9 @@
+{% if FileList %}
+    <ul>
+    {% for file in FileList %}
+    <li><a href="../ProjectView/?id={{ ProjectId }}&file={{ file }}">{{ file }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No files are available.</p>
+{% endif %}

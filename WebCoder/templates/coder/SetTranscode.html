@@ -1,0 +1,11 @@
+<h1>Ready for TransCode {{ FileName }} in {{ ProjectId }}</h1>
+<form enctype="multipart/form-data" action="../TransCode/" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="FileName" value="{{ FileName }}" />
+    <input type="hidden" name="ProjectId" value="{{ ProjectId }}" />
+    FFmpeg option
+    <br/>
+    <input type="text" name="Ffmpeg" value="-c:v libx265 -pix_fmt yuv420p10le -color_primaries bt2020 -colorspace bt2020nc -color_trc smpte2084 -tag:v hvc1 -b:v 30M -c:a aac -b:a 128k" />
+    </br><input type="text" name="OutputFileName" value="output.mp4" /></br>
+    <input type="submit"/>
+</form>

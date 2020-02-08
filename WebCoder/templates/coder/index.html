@@ -1,0 +1,7 @@
+<h1>CPU Usage:{{ CPU }}</h1>
+<form enctype="multipart/form-data" action="UploadFile/" method="post">
+    {% csrf_token %}
+    <input type="file" name="myfile" />
+    <br/>
+    <input type="submit" value="upload"/>
+</form>
